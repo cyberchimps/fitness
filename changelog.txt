@@ -1,6 +1,6 @@
-Fitness Changelog
+Fitness Essential Changelog
 
 ****************************
 
-Version 1.0 (09/06/16)
+Version 1.0 (09/07/16)
 - Initial release.

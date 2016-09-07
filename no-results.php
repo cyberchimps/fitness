@@ -18,22 +18,22 @@
 
 <article id="post-0" class="post no-results not-found">
 	<header class="entry-header">
-		<h1 class="entry-title"><?php _e( 'Nothing Found', 'fitness' ); ?></h1>
+		<h1 class="entry-title"><?php _e( 'Nothing Found', 'fit-essential' ); ?></h1>
 	</header><!-- .entry-header -->
 
 	<div class="entry-content">
 		<?php if ( is_home() ) { ?>
 
-			<p><?php printf( __( 'Ready to publish your first post?', 'fitness' ) . ' <a href="%1$s">' . __( 'Get started here', 'fitness' ) . '</a>.', admin_url( 'post-new.php' ) ); ?></p>
+			<p><?php printf( __( 'Ready to publish your first post?', 'fit-essential' ) . ' <a href="%1$s">' . __( 'Get started here', 'fit-essential' ) . '</a>.', admin_url( 'post-new.php' ) ); ?></p>
 
 		<?php } elseif ( is_search() ) { ?>
 
-			<p><?php _e( 'Sorry, but nothing matched your search terms. Please try again with some different keywords.', 'fitness' ); ?></p>
+			<p><?php _e( 'Sorry, but nothing matched your search terms. Please try again with some different keywords.', 'fit-essential' ); ?></p>
 			<?php get_search_form(); ?>
 
 		<?php } else { ?>
 
-			<p><?php _e( 'It seems we cannot find what you are looking for. Perhaps searching can help.', 'fitness' ); ?></p>
+			<p><?php _e( 'It seems we cannot find what you are looking for. Perhaps searching can help.', 'fit-essential' ); ?></p>
 			<?php get_search_form(); ?>
 
 		<?php } ?>

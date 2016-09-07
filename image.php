@@ -42,7 +42,7 @@ get_header(); ?>
 									<div class="entry-meta">
 										<?php
 										$metadata = wp_get_attachment_metadata();
-										printf( __( 'Published', 'fitness' ) . ' <span class="entry-date"><time class="entry-date" datetime="%1$s">%2$s</time></span> - ' . __( 'size', 'fitness' ) . ': <a href="%3$s" title="Link to full-size image">%4$s &times; %5$s</a> ' . __( 'in', 'fitness' ) . ' <a href="%6$s" title="Return to %7$s" rel="gallery">%7$s</a>',
+										printf( __( 'Published', 'fit-essential' ) . ' <span class="entry-date"><time class="entry-date" datetime="%1$s">%2$s</time></span> - ' . __( 'size', 'fit-essential' ) . ': <a href="%3$s" title="Link to full-size image">%4$s &times; %5$s</a> ' . __( 'in', 'fit-essential' ) . ' <a href="%6$s" title="Return to %7$s" rel="gallery">%7$s</a>',
 												esc_attr( get_the_date( 'c' ) ),
 												esc_html( get_the_date() ),
 												wp_get_attachment_url(),
@@ -52,16 +52,16 @@ get_header(); ?>
 												get_the_title( $post->post_parent )
 										);
 										?>
-										<?php edit_post_link( __( 'Edit', 'fitness' ), '<span class="sep"> | </span> <span class="edit-link">', '</span>' ); ?>
+										<?php edit_post_link( __( 'Edit', 'fit-essential' ), '<span class="sep"> | </span> <span class="edit-link">', '</span>' ); ?>
 									</div>
 									<!-- .entry-meta -->
 
 									<nav id="image-navigation" class="row-fluid">
 										<div class="span6">
-											<div class="previous-image"><?php previous_image_link( false, '&larr; ' . __( 'Previous', 'fitness' ) ); ?></div>
+											<div class="previous-image"><?php previous_image_link( false, '&larr; ' . __( 'Previous', 'fit-essential' ) ); ?></div>
 										</div>
 										<div class="span6">
-											<div class="next-image alignright"><?php next_image_link( false, __( 'Next', 'fitness' ) . ' &rarr;' ); ?></div>
+											<div class="next-image alignright"><?php next_image_link( false, __( 'Next', 'fit-essential' ) . ' &rarr;' ); ?></div>
 										</div>
 									</nav>
 									<!-- #image-navigation -->
@@ -89,7 +89,7 @@ get_header(); ?>
 									<!-- .entry-attachment -->
 
 									<?php the_content(); ?>
-									<?php wp_link_pages( array( 'before' => '<div class="page-links">' . __( 'Pages:', 'fitness' ), 'after' => '</div>' ) ); ?>
+									<?php wp_link_pages( array( 'before' => '<div class="page-links">' . __( 'Pages:', 'fit-essential' ), 'after' => '</div>' ) ); ?>
 
 								</div>
 								<!-- .entry-content -->
@@ -151,19 +151,19 @@ get_header(); ?>
 
 								<footer class="entry-meta">
 									<?php if ( comments_open() && pings_open() ) : // Comments and trackbacks open ?>
-										<?php printf( '<a class="comment-link" href="#respond" title="Post a comment">' . __( 'Post a comment', 'fitness' ) . '</a> ' . __( 'or leave a trackback', 'fitness' ) . ': <a class="trackback-link" href="%s" title="Trackback URL for your post" rel="trackback">' . __( 'Trackback URL', 'fitness' ) . '</a>.', get_trackback_url() ); ?>
+										<?php printf( '<a class="comment-link" href="#respond" title="Post a comment">' . __( 'Post a comment', 'fit-essential' ) . '</a> ' . __( 'or leave a trackback', 'fit-essential' ) . ': <a class="trackback-link" href="%s" title="Trackback URL for your post" rel="trackback">' . __( 'Trackback URL', 'fit-essential' ) . '</a>.', get_trackback_url() ); ?>
 									<?php elseif ( !comments_open() && pings_open() ) : // Only trackbacks open ?>
-										<?php printf( __( 'Comments are closed, but you can leave a trackback:', 'fitness' ) . ' <a class="trackback-link" href="%s" title="Trackback URL for your post" rel="trackback">' . __( 'Trackback URL', 'fitness' ) . '</a>.', get_trackback_url() ); ?>
+										<?php printf( __( 'Comments are closed, but you can leave a trackback:', 'fit-essential' ) . ' <a class="trackback-link" href="%s" title="Trackback URL for your post" rel="trackback">' . __( 'Trackback URL', 'fit-essential' ) . '</a>.', get_trackback_url() ); ?>
 									<?php
 									elseif ( comments_open() && !pings_open() ) : // Only comments open
 										?>
-										<?php _e( 'Trackbacks are closed, but you can', 'fitness' ) . ' <a class="comment-link" href="#respond" title="Post a comment">' . __( 'post a comment', 'fitness' ) . '</a>.'; ?>
+										<?php _e( 'Trackbacks are closed, but you can', 'fit-essential' ) . ' <a class="comment-link" href="#respond" title="Post a comment">' . __( 'post a comment', 'fit-essential' ) . '</a>.'; ?>
 									<?php
 									elseif ( !comments_open() && !pings_open() ) : // Comments and trackbacks closed
 										?>
-										<?php _e( 'Both comments and trackbacks are currently closed.', 'fitness' ); ?>
+										<?php _e( 'Both comments and trackbacks are currently closed.', 'fit-essential' ); ?>
 									<?php endif; ?>
-									<?php edit_post_link( __( 'Edit', 'fitness' ), ' <span class="edit-link">', '</span>' ); ?>
+									<?php edit_post_link( __( 'Edit', 'fit-essential' ), ' <span class="edit-link">', '</span>' ); ?>
 								</footer>
 								<!-- .entry-meta -->
 							</article><!-- #post-<?php the_ID(); ?> -->
