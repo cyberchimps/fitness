@@ -33,7 +33,7 @@ get_header(); ?>
 					<?php if( get_theme_mod( 'error_custom_title' ) != '' ): ?>
           <?php echo get_theme_mod( 'error_custom_title' ); ?>
           <?php else: ?>
-					<?php _e( 'Oops! That page cannot be found.', 'fitness' ); ?></h2>
+					<?php _e( 'Oops! That page cannot be found.', 'fit-essential' ); ?></h2>
           <?php endif; ?>
 			</header>
 
@@ -41,7 +41,7 @@ get_header(); ?>
       	<?php if( get_theme_mod( 'error_custom_content' ) != '' ): ?>
         	<p><?php echo get_theme_mod( 'error_custom_content' ); ?></p>
         <?php else: ?>
-					<p><?php _e( 'It looks like nothing was found at this location. Maybe try searching for it?', 'fitness' ); ?></p>
+					<p><?php _e( 'It looks like nothing was found at this location. Maybe try searching for it?', 'fit-essential' ); ?></p>
 				<?php endif; ?>
 				<?php get_search_form(); ?>
 

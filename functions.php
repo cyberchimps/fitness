@@ -14,11 +14,11 @@
  * @link     http://www.cyberchimps.com/
  */
 // Load text domain.
-function fitness_text_domain() {
-	load_theme_textdomain( 'fitness', get_template_directory() . '/inc/languages' );
+function fit_essential_text_domain() {
+	load_theme_textdomain( 'fit-essential', get_template_directory() . '/inc/languages' );
 }
 
-add_action( 'after_setup_theme', 'fitness_text_domain' );
+add_action( 'after_setup_theme', 'fit_essential_text_domain' );
 
 // Load Core
 require_once( get_template_directory() . '/cyberchimps/init.php' );
@@ -31,20 +31,20 @@ if ( ! isset( $content_width ) ) {
 /**
  * Set theme up
  */
-function fitness_theme_setup() {
+function fit_essential_theme_setup() {
 	//image size for the blog page
 	add_image_size( 'blog-page', 1000, 600, true ); //830 pixels wide and 180 pixels tall
 }
 
-add_action( 'after_theme_setup', 'fitness_theme_setup' );
+add_action( 'after_theme_setup', 'fit_essential_theme_setup' );
 
-function fitness_add_site_info() {
+function fit_essential_add_site_info() {
 	?>
 	<p>&copy; Company Name</p>
 	<?php
 }
 
-add_action( 'cyberchimps_site_info', 'fitness_add_site_info' );
+add_action( 'cyberchimps_site_info', 'fit_essential_add_site_info' );
 
 if ( ! function_exists( 'cyberchimps_comment' ) ) :
 
@@ -57,7 +57,7 @@ if ( ! function_exists( 'cyberchimps_comment' ) ) :
 			case 'trackback' :
 				?>
 				<li class="post pingback">
-					<p><?php _e( 'Pingback:', 'fitness' ); ?> <?php comment_author_link(); ?><?php edit_comment_link( __( '(Edit)', 'fitness' ), ' ' ); ?></p>
+					<p><?php _e( 'Pingback:', 'fit-essential' ); ?> <?php comment_author_link(); ?><?php edit_comment_link( __( '(Edit)', 'fit-essential' ), ' ' ); ?></p>
 					<?php
 					break;
 				default :
@@ -67,11 +67,11 @@ if ( ! function_exists( 'cyberchimps_comment' ) ) :
 						<footer>
 							<div class="comment-author reviewer vcard">
 								<?php echo get_avatar( $comment, 40 ); ?>
-								<?php printf( '%s <span class="says">' . __( 'says:', 'fitness' ) . '</span>', sprintf( '<cite class="fn">%s</cite>', get_comment_author_link() ) ); ?>
+								<?php printf( '%s <span class="says">' . __( 'says:', 'fit-essential' ) . '</span>', sprintf( '<cite class="fn">%s</cite>', get_comment_author_link() ) ); ?>
 							</div>
 							<!-- .comment-author .vcard -->
 							<?php if ( $comment->comment_approved == '0' ) : ?>
-								<em><?php _e( 'Your comment is awaiting moderation.', 'fitness' ); ?></em>
+								<em><?php _e( 'Your comment is awaiting moderation.', 'fit-essential' ); ?></em>
 								<br/>
 							<?php endif; ?>
 
@@ -80,11 +80,11 @@ if ( ! function_exists( 'cyberchimps_comment' ) ) :
 									<time pubdate datetime="<?php comment_time( 'c' ); ?>">
 										<?php
 										/* translators: 1: date, 2: time */
-										printf( __( '%1$s at %2$s', 'fitness' ), get_comment_date(), get_comment_time() );
+										printf( __( '%1$s at %2$s', 'fit-essential' ), get_comment_date(), get_comment_time() );
 										?>
 									</time>
 								</a>
-								<?php edit_comment_link( __( '(Edit)', 'fitness' ), ' ' );
+								<?php edit_comment_link( __( '(Edit)', 'fit-essential' ), ' ' );
 								?>
 							</div>
 							<!-- .comment-meta .commentmetadata -->
@@ -115,72 +115,72 @@ if ( ! function_exists( 'cyberchimps_comment' ) ) :
 	}
 
 //Theme Name
-	function fitness_options_theme_name() {
-		$text = 'Fitness';
+	function fit_essential_options_theme_name() {
+		$text = 'Fitness Essential';
 
 		return $text;
 	}
 
 //Doc's URL
-	function fitness_options_documentation_url() {
+	function fit_essential_options_documentation_url() {
 		$url = 'http://cyberchimps.com/help/';
 
 		return $url;
 	}
 
 // Support Forum URL
-	function fitness_options_support_forum() {
+	function fit_essential_options_support_forum() {
 		$url = 'http://cyberchimps.com/forum/free/fitness/';
 
 		return $url;
 	}
 
 //Page Options Help URL
-	function fitness_options_page_options_help() {
+	function fit_essential_options_page_options_help() {
 		$url = 'http://cyberchimps.com/element-how-tos/';
 
 		return $url;
 	}
 
 // Slider Options Help URL
-	function fitness_options_slider_options_help() {
+	function fit_essential_options_slider_options_help() {
 		$url = 'http://cyberchimps.com/faq/how-to-use-the-ifeature-pro-slider/';
 
 		return $url;
 	}
 
-	add_filter( 'cyberchimps_current_theme_name', 'fitness_options_theme_name', 1 );
-	add_filter( 'cyberchimps_documentation', 'fitness_options_documentation_url' );
-	add_filter( 'cyberchimps_support_forum', 'fitness_options_support_forum' );
-	add_filter( 'cyberchimps_page_options_help', 'fitness_options_page_options_help' );
-	add_filter( 'cyberchimps_slider_options_help', 'fitness_options_slider_options_help' );
+	add_filter( 'cyberchimps_current_theme_name', 'fit_essential_options_theme_name', 1 );
+	add_filter( 'cyberchimps_documentation', 'fit_essential_options_documentation_url' );
+	add_filter( 'cyberchimps_support_forum', 'fit_essential_options_support_forum' );
+	add_filter( 'cyberchimps_page_options_help', 'fit_essential_options_page_options_help' );
+	add_filter( 'cyberchimps_slider_options_help', 'fit_essential_options_slider_options_help' );
 
 	// enabling theme support for title tag
-	function fitness_title_setup()
+	function fit_essential_title_setup()
 	{
 		add_theme_support( 'title-tag' );
 	}
-	add_action( 'after_setup_theme', 'fitness_title_setup' );
+	add_action( 'after_setup_theme', 'fit_essential_title_setup' );
 	
 // Help Section
-	function fitness_options_help_header() {
-		$text = 'Fitness';
+	function fit_essential_options_help_header() {
+		$text = 'Fitness Essentials';
 
 		return $text;
 	}
 
-	function fitness_options_help_sub_header() {
-		$text = __( 'Fitness a Clean and Responsive Wordpress Theme', 'fitness' );
+	function fit_essential_options_help_sub_header() {
+		$text = __( 'Fitness Essential a Clean and Responsive Wordpress Theme', 'fit-essential' );
 
 		return $text;
 	}
 
-	add_filter( 'cyberchimps_help_heading', 'fitness_options_help_header' );
-	add_filter( 'cyberchimps_help_sub_heading', 'fitness_options_help_sub_header' );
+	add_filter( 'cyberchimps_help_heading', 'fit_essential_options_help_header' );
+	add_filter( 'cyberchimps_help_sub_heading', 'fit_essential_options_help_sub_header' );
 
 // Branding images and defaults
 //theme specific skin options in array. Must always include option default
-	function fitness_skin_color_options( $options ) {
+	function fit_essential_skin_color_options( $options ) {
 		// Get path of image
 		$imagepath = get_template_directory_uri() . '/inc/css/skins/images/';
 
@@ -192,10 +192,10 @@ if ( ! function_exists( 'cyberchimps_comment' ) ) :
 		return $options;
 	}
 
-	add_filter( 'cyberchimps_skin_color', 'fitness_skin_color_options', 1 );
+	add_filter( 'cyberchimps_skin_color', 'fit_essential_skin_color_options', 1 );
 
 // theme specific background images
-	function fitness_background_image( $options ) {
+	function fit_essential_background_image( $options ) {
 		$imagepath = get_template_directory_uri() . '/cyberchimps/lib/images/';
 		$options = array(
 			'none' => $imagepath . 'backgrounds/thumbs/none.png',
@@ -208,7 +208,7 @@ if ( ! function_exists( 'cyberchimps_comment' ) ) :
 		return $options;
 	}
 
-	add_filter( 'cyberchimps_background_image', 'fitness_background_image' );
+	add_filter( 'cyberchimps_background_image', 'fit_essential_background_image' );
 
 	/**
 	 * Sets header drag and drop defaults
@@ -217,14 +217,14 @@ if ( ! function_exists( 'cyberchimps_comment' ) ) :
 	 *
 	 * @return array
 	 */
-	function fitness_header_drag_and_drop_defaults( $orig ) {
+	function fit_essential_header_drag_and_drop_defaults( $orig ) {
 		// Just remove banner as there is no styling for this
 		unset( $orig[ 'cyberchimps_banner' ] );
 
 		return $orig;
 	}
 
-	add_filter( 'header_drag_and_drop_options', 'fitness_header_drag_and_drop_defaults', 20 );
+	add_filter( 'header_drag_and_drop_options', 'fit_essential_header_drag_and_drop_defaults', 20 );
 
 	/**
 	 * Removes the banner section
@@ -233,31 +233,31 @@ if ( ! function_exists( 'cyberchimps_comment' ) ) :
 	 *
 	 * @return array
 	 */
-	function fitness_pro_header_sections() {
+	function fit_essential_pro_header_sections() {
 		$new_section[][ 4 ] = array(
 			'id' => 'cyberchimps_custom_css_section',
-			'label' => __( 'Custom CSS', 'fitness' ),
+			'label' => __( 'Custom CSS', 'fit-essential' ),
 			'heading' => 'cyberchimps_design_heading'
 		);
 		$new_section[][ 4 ] = array(
 			'id' => 'cyberchimps_header_details_section',
-			'label' => __( 'Contact Element', 'fitness' ),
+			'label' => __( 'Contact Element', 'fit-essential' ),
 			'heading' => 'cyberchimps_header_heading'
 		);
 		$new_section[][ 1 ] = array(
 			'id' => 'cyberchimps_import_export_section',
-			'label' => __( 'Import / Export', 'fitness' ),
+			'label' => __( 'Import / Export', 'fit-essential' ),
 			'heading' => 'cyberchimps_import_export_heading'
 		);
 
 		return $new_section;
 	}
 
-	add_filter( 'cyberchimps_pro_header_sections', 'fitness_pro_header_sections' );
+	add_filter( 'cyberchimps_pro_header_sections', 'fit_essential_pro_header_sections' );
 
-	function fitness_pro_header_fields() {
+	function fit_essential_pro_header_fields() {
 		$new_field[][ 1 ] = array(
-			'name' => __( 'Custom CSS', 'fitness' ),
+			'name' => __( 'Custom CSS', 'fit-essential' ),
 			'id' => 'custom_css',
 			'std' => '',
 			'type' => 'csstextarea',
@@ -265,7 +265,7 @@ if ( ! function_exists( 'cyberchimps_comment' ) ) :
 			'heading' => 'cyberchimps_design_heading'
 		);
 		$new_field[][ 1 ] = array(
-			'name' => __( 'Details', 'fitness' ),
+			'name' => __( 'Details', 'fit-essential' ),
 			'id' => 'contact_details',
 			'std' => '',
 			'type' => 'textarea',
@@ -273,21 +273,21 @@ if ( ! function_exists( 'cyberchimps_comment' ) ) :
 			'heading' => 'cyberchimps_header_heading'
 		);
 		$new_field[][ 2 ] = array(
-			'name' => __( 'Breadcrumbs', 'fitness' ),
+			'name' => __( 'Breadcrumbs', 'fit-essential' ),
 			'id' => 'single_post_breadcrumbs',
 			'type' => 'toggle',
 			'section' => 'cyberchimps_single_post_section',
 			'heading' => 'cyberchimps_templates_heading'
 		);
 		$new_field[][ 2 ] = array(
-			'name' => __( 'Breadcrumbs', 'fitness' ),
+			'name' => __( 'Breadcrumbs', 'fit-essential' ),
 			'id' => 'archive_breadcrumbs',
 			'type' => 'toggle',
 			'section' => 'cyberchimps_archive_section',
 			'heading' => 'cyberchimps_templates_heading'
 		);
 		$new_field[][ 4 ] = array(
-			'name' => __( 'Cyberchimps Link', 'fitness' ),
+			'name' => __( 'Cyberchimps Link', 'fit-essential' ),
 			'id' => 'footer_cyberchimps_link',
 			'std' => 1,
 			'type' => 'toggle',
@@ -295,23 +295,23 @@ if ( ! function_exists( 'cyberchimps_comment' ) ) :
 			'heading' => 'cyberchimps_footer_heading'
 		);
 		$new_field[][ 5 ] = array(
-			'name' => __( 'Footer Scripts', 'fitness' ),
+			'name' => __( 'Footer Scripts', 'fit-essential' ),
 			'id' => 'footer_scripts',
 			'std' => '',
-			'desc' => __( 'Please add script tags', 'fitness' ),
+			'desc' => __( 'Please add script tags', 'fit-essential' ),
 			'type' => 'unfiltered_textarea',
 			'section' => 'cyberchimps_footer_section',
 			'heading' => 'cyberchimps_footer_heading'
 		);
 		$new_field[][ 1 ] = array(
-			'name' => __( 'Export Settings', 'fitness' ),
+			'name' => __( 'Export Settings', 'fit-essential' ),
 			'id' => 'export_textarea',
 			'type' => 'export',
 			'section' => 'cyberchimps_import_export_section',
 			'heading' => 'cyberchimps_import_export_heading'
 		);
 		$new_field[][ 2 ] = array(
-			'name' => __( 'Import Settings', 'fitness' ),
+			'name' => __( 'Import Settings', 'fit-essential' ),
 			'id' => 'import_textarea',
 			'type' => 'import',
 			'section' => 'cyberchimps_import_export_section',
@@ -321,22 +321,22 @@ if ( ! function_exists( 'cyberchimps_comment' ) ) :
 		return $new_field;
 	}
 
-	add_filter( 'cyberchimps_pro_header_fields', 'fitness_pro_header_fields' );
+	add_filter( 'cyberchimps_pro_header_fields', 'fit_essential_pro_header_fields' );
 
 // theme specific typography options
-	function fitness_typography_sizes( $sizes ) {
+	function fit_essential_typography_sizes( $sizes ) {
 		$sizes = array( '8', '9', '10', '12', '14', '16', '20' );
 
 		return $sizes;
 	}
 
-	function fitness_typography_styles( $styles ) {
+	function fit_essential_typography_styles( $styles ) {
 		$styles = array( 'normal' => 'Normal', 'bold' => 'Bold' );
 
 		return $styles;
 	}
 
-	function fitness_typography_faces( $orig ) {
+	function fit_essential_typography_faces( $orig ) {
 
 		$new = array(
 			'"Noto Sans", Arial, sans-serif' => 'Noto Sans',
@@ -349,7 +349,7 @@ if ( ! function_exists( 'cyberchimps_comment' ) ) :
 		return $new;
 	}
 
-	function fitness_typography_defaults() {
+	function fit_essential_typography_defaults() {
 		$default = array(
 			'size' => '16px',
 			'face' => '"Source Sans Pro", Arial, sans-serif',
@@ -360,7 +360,7 @@ if ( ! function_exists( 'cyberchimps_comment' ) ) :
 		return $default;
 	}
 
-	function fitness_typography_heading_defaults() {
+	function fit_essential_typography_heading_defaults() {
 		$default = array(
 			'size' => '',
 			'face' => '"Source Sans Pro", Arial, sans-serif',
@@ -371,35 +371,35 @@ if ( ! function_exists( 'cyberchimps_comment' ) ) :
 		return $default;
 	}
 
-	function fitness_max_width_default() {
+	function fit_essential_max_width_default() {
 		return '1180';
 	}
 
 	/* Added google font featured text */
 
-	function fitness_fp_add_google_fonts() {
+	function fit_essential_fp_add_google_fonts() {
 		$protocol = is_ssl() ? 'https' : 'http';
 		wp_register_style( 'fp-googleFonts', $protocol . '://fonts.googleapis.com/css?family=Source+Sans+Pro:200,700' );
 		wp_enqueue_style( 'fp-googleFonts' );
 	}
 
-	add_action( 'wp_print_styles', 'fitness_fp_add_google_fonts' );
+	add_action( 'wp_print_styles', 'fit_essential_fp_add_google_fonts' );
 
 
 
-	add_filter( 'cyberchimps_typography_sizes', 'fitness_typography_sizes' );
-	add_filter( 'cyberchimps_typography_styles', 'fitness_typography_styles' );
-	add_filter( 'cyberchimps_typography_faces', 'fitness_typography_faces' );
-	add_filter( 'cyberchimps_typography_defaults', 'fitness_typography_defaults' );
-	add_filter( 'cyberchimps_typography_heading_defaults', 'fitness_typography_heading_defaults' );
-	add_filter( 'max_width_default', 'fitness_max_width_default', '111' );
+	add_filter( 'cyberchimps_typography_sizes', 'fit_essential_typography_sizes' );
+	add_filter( 'cyberchimps_typography_styles', 'fit_essential_typography_styles' );
+	add_filter( 'cyberchimps_typography_faces', 'fit_essential_typography_faces' );
+	add_filter( 'cyberchimps_typography_defaults', 'fit_essential_typography_defaults' );
+	add_filter( 'cyberchimps_typography_heading_defaults', 'fit_essential_typography_heading_defaults' );
+	add_filter( 'max_width_default', 'fit_essential_max_width_default', '111' );
 
 //change cyberchimps featured image to use this new image size
-	function fitness_featured_image_size() {
+	function fit_essential_featured_image_size() {
 		return 'blog-page';
 	}
 
-	add_filter( 'cyberchimps_post_thumbnail_size', 'fitness_featured_image_size' );
+	add_filter( 'cyberchimps_post_thumbnail_size', 'fit_essential_featured_image_size' );
 
 	/**
 	 * Adds option for header image
@@ -408,13 +408,13 @@ if ( ! function_exists( 'cyberchimps_comment' ) ) :
 	 *
 	 * @return array
 	 */
-	function fitness_add_theme_options( $original ) {
+	function fit_essential_add_theme_options( $original ) {
 		$new_field[][ 1 ] = array(
-			'name' => __( 'Header Image', 'fitness' ),
+			'name' => __( 'Header Image', 'fit-essential' ),
 			'id' => 'header_image',
 			'std' => '',
 			'type' => 'upload',
-			'desc' => __( 'The image used for the header needs to be a large image. We recommend a minimum width of 1000px and a maximum height of 550px', 'fitness' ),
+			'desc' => __( 'The image used for the header needs to be a large image. We recommend a minimum width of 1000px and a maximum height of 550px', 'fit-essential' ),
 			'std' => get_template_directory_uri() . '/images/header.jpg',
 			'section' => 'cyberchimps_header_options_section',
 			'heading' => 'cyberchimps_header_heading'
@@ -424,7 +424,7 @@ if ( ! function_exists( 'cyberchimps_comment' ) ) :
 		return $new_fields;
 	}
 
-	add_filter( 'cyberchimps_field_filter', 'fitness_add_theme_options', 10 );
+	add_filter( 'cyberchimps_field_filter', 'fit_essential_add_theme_options', 10 );
 
 	/**
 	 * Removes unwanted fields
@@ -433,7 +433,7 @@ if ( ! function_exists( 'cyberchimps_comment' ) ) :
 	 *
 	 * @return array
 	 */
-	function fitness_remove_default_options( $orig ) {
+	function fit_essential_remove_default_options( $orig ) {
 
 		$remove = array(
 			'searchbar'
@@ -444,48 +444,48 @@ if ( ! function_exists( 'cyberchimps_comment' ) ) :
 		return $new_options;
 	}
 
-	add_filter( 'cyberchimps_field_filter', 'fitness_remove_default_options' );
+	add_filter( 'cyberchimps_field_filter', 'fit_essential_remove_default_options' );
 
-	function fitness_header_drag_and_drop_options() {
+	function fit_essential_header_drag_and_drop_options() {
 		$options = array(
-			'cyberchimps_logo' => __( 'Logo', 'fitness' )
+			'cyberchimps_logo' => __( 'Logo', 'fit-essential' )
 		);
 
 		return $options;
 	}
 
-	add_filter( 'header_drag_and_drop_options', 'fitness_header_drag_and_drop_options', 50 );
+	add_filter( 'header_drag_and_drop_options', 'fit_essential_header_drag_and_drop_options', 50 );
 
-	function fitness_header_drag_and_drop_default() {
+	function fit_essential_header_drag_and_drop_default() {
 		$default = array(
-			'cyberchimps_logo' => __( 'Logo', 'fitness' )
+			'cyberchimps_logo' => __( 'Logo', 'fit-essential' )
 		);
 
 		return $default;
 	}
 
-	add_filter( 'header_drag_and_drop_default', 'fitness_header_drag_and_drop_default', 50 );
+	add_filter( 'header_drag_and_drop_default', 'fit_essential_header_drag_and_drop_default', 50 );
 
 // Additional Fields
-	function fitness_fp_additional_fields( $fields_list ) {
+	function fit_essential_fp_additional_fields( $fields_list ) {
 		$fields_list[] = array(
-			'name' => __( 'Header Featured Title', 'fitness' ),
+			'name' => __( 'Header Featured Title', 'fit-essential' ),
 			'id' => 'header_featured_title',
 			'type' => 'text',
-			'std' => __( 'Beautifull Wordpress Themes', 'fitness' ),
+			'std' => __( 'Beautifull Wordpress Themes', 'fit-essential' ),
 			'section' => 'cyberchimps_header_options_section',
 			'heading' => 'cyberchimps_header_heading'
 		);
 		$fields_list[] = array(
-			'name' => __( 'Header Featured Text', 'fitness' ),
+			'name' => __( 'Header Featured Text', 'fit-essential' ),
 			'id' => 'header_featured_text',
 			'type' => 'textarea',
-			'std' => __( 'Create a great websites in minutes using a CyberChimps theme ', 'fitness' ),
+			'std' => __( 'Create a great websites in minutes using a CyberChimps theme ', 'fit-essential' ),
 			'section' => 'cyberchimps_header_options_section',
 			'heading' => 'cyberchimps_header_heading'
 		);
 		$fields_list[] = array(
-			'name' => __( 'Header Featured Link', 'fitness' ),
+			'name' => __( 'Header Featured Link', 'fit-essential' ),
 			'id' => 'header_featured_link',
 			'type' => 'text',
 			'std' => 'http://cyberchimps.com/',
@@ -493,36 +493,36 @@ if ( ! function_exists( 'cyberchimps_comment' ) ) :
 			'heading' => 'cyberchimps_header_heading'
 		);
 		$fields_list[] = array(
-			'name' => __( 'Header Featured Link Text', 'fitness' ),
+			'name' => __( 'Header Featured Link Text', 'fit-essential' ),
 			'id' => 'header_featured_link_text',
 			'type' => 'text',
-			'std' => __( 'View Themes & Pricing', 'fitness' ),
+			'std' => __( 'View Themes & Pricing', 'fit-essential' ),
 			'section' => 'cyberchimps_header_options_section',
 			'heading' => 'cyberchimps_header_heading'
 		);
 		return $fields_list;
 	}
 
-	add_filter( 'cyberchimps_field_list', 'fitness_fp_additional_fields', 20, 1 );
+	add_filter( 'cyberchimps_field_list', 'fit_essential_fp_additional_fields', 20, 1 );
 
 
 
 	/* Removed default functions on hooks and added new function on hooks */
 
-	function fitness_fp_set_actions() {
+	function fit_essential_fp_set_actions() {
 		remove_action( 'boxes', 'cyberchimps_boxes_render_display' );
-		add_action( 'boxes', 'fitness_fp_boxes_render_display' );
+		add_action( 'boxes', 'fit_essential_fp_boxes_render_display' );
 
 		/* Removed default pagination and added pagination */
-		add_action( 'cyberchimps_after_container', 'fitness_nav' );
+		add_action( 'cyberchimps_after_container', 'fit_essential_nav' );
 	}
 
-	add_action( 'init', 'fitness_fp_set_actions' );
+	add_action( 'init', 'fit_essential_fp_set_actions' );
 
 
 	/* Boxes element Markup Changes */
 
-	function fitness_fp_boxes_render_display() {
+	function fit_essential_fp_boxes_render_display() {
 
 		// Intialize box counter
 		$box_counter = 1;
@@ -651,9 +651,9 @@ if($count==2) break;
 								 alt="CyberChimps Slider"/>
 						</a>
 
-						<h2 class="box-widget-title"><?php printf( __( '%1$s Slider', 'fitness' ), fitness_options_help_header() ); ?></h2>
+						<h2 class="box-widget-title"><?php printf( __( '%1$s Slider', 'fit-essential' ), fit_essential_options_help_header() ); ?></h2>
 
-						<p><?php printf( __( 'The New Touch Friendly %1$s Slider now responds to any mobile touch device.', 'fitness' ), fitness_options_help_header() ); ?></p>
+						<p><?php printf( __( 'The New Touch Friendly %1$s Slider now responds to any mobile touch device.', 'fit-essential' ), fit_essential_options_help_header() ); ?></p>
 					</div><!--end box1-->
 
 					<div class="box span4">
@@ -662,9 +662,9 @@ if($count==2) break;
 								 alt="CyberChimps Blueprint"/>
 						</a>
 
-						<h2 class="box-widget-title"><?php _e( 'Responsive Design', 'fitness' ); ?></h2>
+						<h2 class="box-widget-title"><?php _e( 'Responsive Design', 'fit-essential' ); ?></h2>
 
-						<p><?php printf( __( 'With %1$s and touch friendly responsive design you can now control your website on any device.', 'fitness' ), fitness_options_help_header() ); ?></p>
+						<p><?php printf( __( 'With %1$s and touch friendly responsive design you can now control your website on any device.', 'fit-essential' ), fit_essential_options_help_header() ); ?></p>
 					</div><!--end box3-->
 
 					<div class="box span4">
@@ -673,9 +673,9 @@ if($count==2) break;
 								 alt="CyberChimps Help"/>
 						</a>
 
-						<h2 class="box-widget-title"><?php _e( 'Excellent Support', 'fitness' ); ?></h2>
+						<h2 class="box-widget-title"><?php _e( 'Excellent Support', 'fit-essential' ); ?></h2>
 
-						<p><?php _e( 'Need help? Read the instructions and please visit our dedicated Pro Support Forum.', 'fitness' ); ?></p>
+						<p><?php _e( 'Need help? Read the instructions and please visit our dedicated Pro Support Forum.', 'fit-essential' ); ?></p>
 					</div><!--end box4-->
 
 				<?php
@@ -689,7 +689,7 @@ if($count==2) break;
 
 	/* Added default wordpress navigation Previous post and Next post */
 
-	function fitness_nav( $html_id ) {
+	function fit_essential_nav( $html_id ) {
 		global $wp_query;
 
 		$html_id = esc_attr( $html_id );
@@ -698,10 +698,10 @@ if($count==2) break;
 			?>
 			<nav id="navigation-container" class="navigation row-fluid" role="navigation">
 				<?php if ( get_next_posts_link() ) { ?>
-					<div class="nav-previous span6 pull-left"><span class="meta-nav">&larr;</span> <?php next_posts_link( __( ' Previous posts', 'fitness' ) ); ?></div>
+					<div class="nav-previous span6 pull-left"><span class="meta-nav">&larr;</span> <?php next_posts_link( __( ' Previous posts', 'fit-essential' ) ); ?></div>
 				<?php } ?>
 				<?php if ( get_previous_posts_link() ) { ?>
-					<div class="nav-next span6 pull-right"><?php previous_posts_link( __( 'Newer posts', 'fitness' ) ); ?><span class="meta-nav">&rarr;</span></div>
+					<div class="nav-next span6 pull-right"><?php previous_posts_link( __( 'Newer posts', 'fit-essential' ) ); ?><span class="meta-nav">&rarr;</span></div>
 				<?php } ?>
 		</nav><!-- #<?php echo $html_id; ?> .navigation -->
 			<?php
@@ -709,15 +709,15 @@ if($count==2) break;
 	}
 
 	/* Removed separator for post meta */
-	add_filter( 'cyberchimps_entry_meta_sep', 'fitness_fp_sep' );
+	add_filter( 'cyberchimps_entry_meta_sep', 'fit_essential_fp_sep' );
 
-	function fitness_fp_sep() {
+	function fit_essential_fp_sep() {
 		return '';
 	}
 
 	/* Added theme specific options in customizer */
 
-	function fitness_fp_customize_register( $wp_customize ) {
+	function fit_essential_fp_customize_register( $wp_customize ) {
             
             $wp_customize->remove_setting( 'searchbar' );
         $wp_customize->remove_control( 'searchbar' );
@@ -729,7 +729,7 @@ if($count==2) break;
 			'sanitize_callback' => 'cyberchimps_text_sanitization'
 		) );
 		$wp_customize->add_control( 'header_featured_title', array(
-			'label' => __( 'Header Featured Title', 'fitness' ),
+			'label' => __( 'Header Featured Title', 'fit-essential' ),
 			'section' => 'cyberchimps_header_section',
 			'settings' => 'header_featured_title',
 			'type' => 'text'
@@ -742,7 +742,7 @@ if($count==2) break;
 		) );
 
 		$wp_customize->add_control( 'header_featured_text', array(
-			'label' => __( 'Header Featured Text', 'fitness' ),
+			'label' => __( 'Header Featured Text', 'fit-essential' ),
 			'section' => 'cyberchimps_header_section',
 			'settings' => 'header_featured_text',
 			'type' => 'textarea'
@@ -755,7 +755,7 @@ if($count==2) break;
 		) );
 
 		$wp_customize->add_control( 'header_featured_link', array(
-			'label' => __( 'Header Featured Link', 'fitness' ),
+			'label' => __( 'Header Featured Link', 'fit-essential' ),
 			'section' => 'cyberchimps_header_section',
 			'settings' => 'header_featured_link',
 			'type' => 'text'
@@ -768,7 +768,7 @@ if($count==2) break;
 		) );
 
 		$wp_customize->add_control( 'header_featured_link_text', array(
-			'label' => __( 'Header Featured Link Text', 'fitness' ),
+			'label' => __( 'Header Featured Link Text', 'fit-essential' ),
 			'section' => 'cyberchimps_header_section',
 			'settings' => 'header_featured_link_text',
 			'type' => 'text'
@@ -794,38 +794,38 @@ if($count==2) break;
 		
 	}
 
-	add_action( 'customize_register', 'fitness_fp_customize_register', 50 );
+	add_action( 'customize_register', 'fit_essential_fp_customize_register', 50 );
 
-	add_filter('cyberchimps_slider_lite_img2' , 'fitness_slider_lite_img');
-	add_filter('cyberchimps_slider_lite_img3' , 'fitness_slider_lite_img');
+	add_filter('cyberchimps_slider_lite_img2' , 'fit_essential_slider_lite_img');
+	add_filter('cyberchimps_slider_lite_img3' , 'fit_essential_slider_lite_img');
 	
-	function fitness_slider_lite_img($img){
+	function fit_essential_slider_lite_img($img){
 		$img = '/images/branding/slide1.jpg';
 		return $img;
 	}
 	
-	add_filter('cyberchimps_portfolio_lite_img1' , 'fitness_portfolio_lite_img');
-	add_filter('cyberchimps_portfolio_lite_img2' , 'fitness_portfolio_lite_img');
-	add_filter('cyberchimps_portfolio_lite_img3' , 'fitness_portfolio_lite_img');
-	add_filter('cyberchimps_portfolio_lite_img4' , 'fitness_portfolio_lite_img');
+	add_filter('cyberchimps_portfolio_lite_img1' , 'fit_essential_portfolio_lite_img');
+	add_filter('cyberchimps_portfolio_lite_img2' , 'fit_essential_portfolio_lite_img');
+	add_filter('cyberchimps_portfolio_lite_img3' , 'fit_essential_portfolio_lite_img');
+	add_filter('cyberchimps_portfolio_lite_img4' , 'fit_essential_portfolio_lite_img');
 	
-	function fitness_portfolio_lite_img($img){
+	function fit_essential_portfolio_lite_img($img){
 		$img = '/images/portfolio/port1.jpg';
 		return $img;
 	}
 	
-	add_filter('cyberchimps_boxes_lite_img1' , 'fitness_boxes_lite_img');
-	add_filter('cyberchimps_boxes_lite_img2' , 'fitness_boxes_lite_img');
-	add_filter('cyberchimps_boxes_lite_img3' , 'fitness_boxes_lite_img');
+	add_filter('cyberchimps_boxes_lite_img1' , 'fit_essential_boxes_lite_img');
+	add_filter('cyberchimps_boxes_lite_img2' , 'fit_essential_boxes_lite_img');
+	add_filter('cyberchimps_boxes_lite_img3' , 'fit_essential_boxes_lite_img');
 
-	function fitness_boxes_lite_img($img){
+	function fit_essential_boxes_lite_img($img){
 		$img = '/images/boxes/box1.jpg';
 		return $img;		
 	}
 	
-	add_filter( 'cyberchimp_blog_section_order', 'fitness_blog_section_order' );
+	add_filter( 'cyberchimp_blog_section_order', 'fit_essential_blog_section_order' );
 	
-	function fitness_blog_section_order($blog_section_order){
+	function fit_essential_blog_section_order($blog_section_order){
 	
 		$blog_section_order[0] = 'boxes_lite';
 		$blog_section_order[1] = 'slider_lite';
@@ -836,27 +836,27 @@ if($count==2) break;
 	
 	}
 	
-	add_filter('cyberchimps_display_logo_option' , 'fitness_display_logo_option');
-	function fitness_display_logo_option($val){
+	add_filter('cyberchimps_display_logo_option' , 'fit_essential_display_logo_option');
+	function fit_essential_display_logo_option($val){
 		$val = '1';
 		return $val;
 	}
 	
-	add_filter('cyberchimps_default_logo' , 'fitness_default_logo');
-	function fitness_default_logo($img){
+	add_filter('cyberchimps_default_logo' , 'fit_essential_default_logo');
+	function fit_essential_default_logo($img){
 		$img = get_template_directory_uri() . '/images/logo.png';
 		return $img;
 	}
 	
 	
-	function fitness_default_scripts() {
+	function fit_essential_default_scripts() {
 		wp_enqueue_script( 'cyberchimps-custom-script', get_template_directory_uri() . '/inc/js' . '/custom-scripts.js', array( 'jquery' ), '', true );
 	}
 
-	add_action( 'wp_enqueue_scripts', 'fitness_default_scripts' );
+	add_action( 'wp_enqueue_scripts', 'fit_essential_default_scripts' );
  
 // more text for search results excerpt
-function fitness_blog_excerpt_more_text( $more ) {
+function fit_essential_blog_excerpt_more_text( $more ) {
 	global $post;
         $linktext = cyberchimps_blog_read_more_text();
 	if( $linktext != '' ) {
@@ -872,7 +872,7 @@ function fitness_blog_excerpt_more_text( $more ) {
 }
 
 // Remove header contact option as it is not suitable to the design in this theme.
-function fitness_header_details_section_drag_drop( $sections_list ) {
+function fit_essential_header_details_section_drag_drop( $sections_list ) {
 	return cyberchimps_remove_options( $sections_list, array( 'cyberchimps_header_details_section' ) );
 }
-add_filter( 'cyberchimps_sections_filter', 'fitness_header_details_section_drag_drop' );
+add_filter( 'cyberchimps_sections_filter', 'fit_essential_header_details_section_drag_drop' );

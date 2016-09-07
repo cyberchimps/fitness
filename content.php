@@ -39,7 +39,7 @@
 				 
 				if( is_search() ):
 				?>
-					<a href="<?php the_permalink(); ?>" title="<?php printf( esc_attr__( 'Permalink to %s', 'fitness' ), the_title_attribute( 'echo=0' ) ); ?>" rel="bookmark">
+					<a href="<?php the_permalink(); ?>" title="<?php printf( esc_attr__( 'Permalink to %s', 'fit-essential' ), the_title_attribute( 'echo=0' ) ); ?>" rel="bookmark">
 						<?php ( get_the_title() )? the_title() : the_permalink(); ?>
 					</a>
 				<?php	
@@ -52,10 +52,10 @@
 					// get the post title toggle option
 					$post_title = get_theme_mod( 'single_post_title' );
 					if( $post_title == "1" ) : ?>
-						<a href="<?php the_permalink(); ?>" title="<?php printf( esc_attr__( 'Permalink to %s', 'fitness' ), the_title_attribute( 'echo=0' ) ); ?>" rel="bookmark"><?php ( get_the_title() )? the_title() : the_permalink(); ?></a>
+						<a href="<?php the_permalink(); ?>" title="<?php printf( esc_attr__( 'Permalink to %s', 'fit-essential' ), the_title_attribute( 'echo=0' ) ); ?>" rel="bookmark"><?php ( get_the_title() )? the_title() : the_permalink(); ?></a>
 			<?php	endif;
 				else : ?>
-					<a href="<?php the_permalink(); ?>" title="<?php printf( esc_attr__( 'Permalink to %s', 'fitness' ), the_title_attribute( 'echo=0' ) ); ?>" rel="bookmark"><?php ( get_the_title() )? the_title() : the_permalink(); ?></a>
+					<a href="<?php the_permalink(); ?>" title="<?php printf( esc_attr__( 'Permalink to %s', 'fit-essential' ), the_title_attribute( 'echo=0' ) ); ?>" rel="bookmark"><?php ( get_the_title() )? the_title() : the_permalink(); ?></a>
 			<?php
 				endif;
 			endif; ?>
@@ -67,8 +67,8 @@
   
 		<div class="entry-content">
     	<?php cyberchimps_featured_image(); ?>
-			<?php the_content( __( 'Continue reading', 'fitness' ) . '<span class="meta-nav">&rarr;</span>' ); ?>
-			<?php wp_link_pages( array( 'before' => '<div class="page-links">' . __( 'Pages:', 'fitness' ), 'after' => '</div>' ) ); ?>
+			<?php the_content( __( 'Continue reading', 'fit-essential' ) . '<span class="meta-nav">&rarr;</span>' ); ?>
+			<?php wp_link_pages( array( 'before' => '<div class="page-links">' . __( 'Pages:', 'fit-essential' ), 'after' => '</div>' ) ); ?>
 		</div><!-- .entry-content -->
 		
   <?php elseif( is_search() ): ?>	
@@ -92,8 +92,8 @@
     <?php else: ?>
     	<div class="entry-content">
     		<?php cyberchimps_featured_image(); ?>
-				<?php the_content( __( 'Continue reading', 'fitness' ) . ' <span class="meta-nav">&rarr;</span>' ); ?>
-				<?php wp_link_pages( array( 'before' => '<div class="page-links">' . __( 'Pages:', 'fitness' ), 'after' => '</div>' ) ); ?>
+				<?php the_content( __( 'Continue reading', 'fit-essential' ) . ' <span class="meta-nav">&rarr;</span>' ); ?>
+				<?php wp_link_pages( array( 'before' => '<div class="page-links">' . __( 'Pages:', 'fit-essential' ), 'after' => '</div>' ) ); ?>
 			</div><!-- .entry-content -->
     <?php endif; ?>
 
@@ -114,8 +114,8 @@
     <?php else: ?>
     	<div class="entry-content">
     		<?php cyberchimps_featured_image(); ?>
-				<?php the_content( __( 'Continue reading', 'fitness' ) . ' <span class="meta-nav">&rarr;</span>' ); ?>
-				<?php wp_link_pages( array( 'before' => '<div class="page-links">' . __( 'Pages:', 'fitness' ), 'after' => '</div>' ) ); ?>
+				<?php the_content( __( 'Continue reading', 'fit-essential' ) . ' <span class="meta-nav">&rarr;</span>' ); ?>
+				<?php wp_link_pages( array( 'before' => '<div class="page-links">' . __( 'Pages:', 'fit-essential' ), 'after' => '</div>' ) ); ?>
 			</div><!-- .entry-content -->
     <?php endif; ?>
 	
@@ -134,7 +134,7 @@
         
 		<?php endif; // End if 'post' == get_post_type() ?>
 		
-		<?php edit_post_link( __( 'Edit', 'fitness' ), '<span class="edit-link">', '</span>' ); ?>
+		<?php edit_post_link( __( 'Edit', 'fit-essential' ), '<span class="edit-link">', '</span>' ); ?>
 		
 	</footer><!-- #entry-meta -->
 	

@@ -30,7 +30,7 @@ get_header(); ?>
 		<?php if ( have_posts() ) : ?>
 
 			<header class="page-header">
-				<h2 class="page-title"><?php printf( __( 'Search Results for: %s', 'fitness' ), '<span>' . get_search_query() . '</span>' ); ?></h2>
+				<h2 class="page-title"><?php printf( __( 'Search Results for: %s', 'fit-essential' ), '<span>' . get_search_query() . '</span>' ); ?></h2>
 			</header>
 
 			<?php /* Start the Loop */ ?>

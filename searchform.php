@@ -17,6 +17,6 @@
 ?>
 
 <form method="get"  id="searchform" class="navbar-search" action="<?php echo esc_url( home_url( '/' ) ); ?>" role="search">
-	<input type="text" class="search-query input-medium" name="s" placeholder="<?php esc_attr_e( 'Search', 'fitness' ); ?> &hellip;" />
+	<input type="text" class="search-query input-medium" name="s" placeholder="<?php esc_attr_e( 'Search', 'fit-essential' ); ?> &hellip;" />
 </form>
 <div class="clear"></div>

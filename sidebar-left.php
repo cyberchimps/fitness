@@ -24,41 +24,41 @@
 	<?php if ( !dynamic_sidebar( 'sidebar-left' ) ) : ?>
 		
 		<div class="widget-container">    
-			<h3 class="widget-title"><?php _e('Pages', 'fitness' ); ?></h3>
+			<h3 class="widget-title"><?php _e('Pages', 'fit-essential' ); ?></h3>
 			<ul>
     			<?php wp_list_pages('title_li=' ); ?>
     		</ul>
     	</div>
     
 		<div class="widget-container">    
-    		<h3 class="widget-title"><?php _e( 'Archives', 'fitness' ); ?></h3>
+    		<h3 class="widget-title"><?php _e( 'Archives', 'fit-essential' ); ?></h3>
     		<ul>
     			<?php wp_get_archives('type=monthly'); ?>
     		</ul>
     	</div>
         
 		<div class="widget-container">
-			<h3 class="widget-title"><?php _e('Categories', 'fitness' ); ?></h3>
+			<h3 class="widget-title"><?php _e('Categories', 'fit-essential' ); ?></h3>
 			<ul>
 				<?php wp_list_categories('show_count=1&title_li='); ?>
 			</ul>
         </div>
         
         <div class="widget-container">
-        	<h3 class="widget-title"><?php _e('WordPress', 'fitness' ); ?></h3>
+        	<h3 class="widget-title"><?php _e('WordPress', 'fit-essential' ); ?></h3>
         	<ul>
         		<?php wp_register(); ?>
         		<li><?php wp_loginout(); ?></li>
-        		<li><a href="<?php echo esc_url( __('http://wordpress.org/', 'fitness' )); ?>" target="_blank" title="<?php esc_attr_e('Powered by WordPress, state-of-the-art semantic personal publishing platform.', 'fitness'); ?>"> <?php _e('WordPress', 'fitness' ); ?></a></li>
+        		<li><a href="<?php echo esc_url( __('http://wordpress.org/', 'fit-essential' )); ?>" target="_blank" title="<?php esc_attr_e('Powered by WordPress, state-of-the-art semantic personal publishing platform.', 'fit-essential'); ?>"> <?php _e('WordPress', 'fit-essential' ); ?></a></li>
         		<?php wp_meta(); ?>
     		</ul>
 		</div>
 		
 		<div class="widget-container">
-			<h3 class="widget-title"><?php _e('Subscribe', 'fitness' ); ?></h3>
+			<h3 class="widget-title"><?php _e('Subscribe', 'fit-essential' ); ?></h3>
 			<ul>
-				<li><a href="<?php bloginfo('rss2_url'); ?>"><?php _e('Entries (RSS)', 'fitness' ); ?></a></li>
-				<li><a href="<?php bloginfo('comments_rss2_url'); ?>"><?php _e('Comments (RSS)', 'fitness' ); ?></a></li>
+				<li><a href="<?php bloginfo('rss2_url'); ?>"><?php _e('Entries (RSS)', 'fit-essential' ); ?></a></li>
+				<li><a href="<?php bloginfo('comments_rss2_url'); ?>"><?php _e('Comments (RSS)', 'fit-essential' ); ?></a></li>
 			</ul>
 		</div>
 		
